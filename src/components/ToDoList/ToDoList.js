@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import "./ToDoList.css";
 
-function ToDoList({todos, onToggle}) {
+function ToDoList({onToggle}) {
+
+  const todos = useSelector(state => state.todos);
   return (
     <div className="container">
     <ul>
